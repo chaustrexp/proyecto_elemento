@@ -12,5 +12,27 @@ export default defineConfig({
   server: {
     port: 3000,        // Puerto en el que se ejecutará el servidor de desarrollo (por defecto es 5173)
     open: true         // Abre automáticamente el navegador al iniciar el servidor
-  }
+  },
+  
+  // Configuración de build para producción
+  build: {
+    // Directorio de salida para los archivos de build
+    outDir: 'dist',
+    // Generar sourcemaps para debugging en producción
+    sourcemap: false,
+    // Configuración de assets
+    assetsDir: 'assets',
+    // Optimización de chunks
+    rollupOptions: {
+      output: {
+        // Configuración de nombres de archivos para mejor caching
+        assetFileNames: 'assets/[name]-[hash][extname]',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js'
+      }
+    }
+  },
+  
+  // Configuración de assets públicos
+  publicDir: 'public'
 })

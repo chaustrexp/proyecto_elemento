@@ -8,6 +8,7 @@ import { useState, useEffect } from 'react'
 import { useTheme } from '../contexts/ThemeContext'
 import { useTranslation } from '../hooks/useTranslation'
 import { useAuth } from '../contexts/AuthContext'
+import useImageFallback from '../hooks/useImageFallback'
 import NotificationCenter from './Notification/NotificationCenter'
 import LanguageSelector from './LanguageSelector'
 import ReportExporter from './Reports/ReportExporter'
@@ -22,6 +23,7 @@ const CleanHeader = ({ onMenuClick, activeView = 'dashboard' }) => {
   const { isDark, toggleTheme } = useTheme()
   const { t } = useTranslation()
   const { user } = useAuth()
+  const { getImageProps, getFallbackProps } = useImageFallback('/sena-logo-alt.png', '🏛️')
 
   // Actualizar hora cada minuto
   useEffect(() => {
@@ -77,17 +79,11 @@ const CleanHeader = ({ onMenuClick, activeView = 'dashboard' }) => {
           <div className="clean-brand">
             <div className="brand-logo">
               <img 
-                src="/sena-logo.png" 
+                {...getImageProps('/sena-logo.png')}
                 alt="SENA" 
                 className="logo-img"
-                onError={(e) => {
-                  e.target.style.display = 'none'
-                  e.target.nextSibling.style.display = 'flex'
-                }}
               />
-              <div className="logo-fallback" style={{ display: 'none' }}>
-                🏛️
-              </div>
+              <div {...getFallbackProps()} />
             </div>
             <div className="brand-text">
               <h1 className="brand-title poppins-font">SENA Bienes</h1>

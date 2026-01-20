@@ -95,7 +95,7 @@ const PerfilModal = ({ onClose }) => {
           <div className="perfil-modal-header-content">
             <div className="perfil-modal-header-info">
               <img 
-                src="/sena-logo.png (2).png" 
+                src="/sena-logo.png" 
                 alt="Perfil" 
                 className="perfil-modal-avatar"
               />

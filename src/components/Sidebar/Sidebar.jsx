@@ -114,7 +114,7 @@ const Sidebar = ({ activeView, onViewChange, isOpen, onClose, onLogout }) => {
         <div className="sidebar-logo-content">
           <div className="sidebar-logo-wrapper">
             <img 
-              src="/sena-logo.png (2).png" 
+              src="/sena-logo.png" 
               alt="Logo SENA" 
               className="sidebar-logo-img"
             />
@@ -135,7 +135,7 @@ const Sidebar = ({ activeView, onViewChange, isOpen, onClose, onLogout }) => {
         <div className="sidebar-user-content">
           <div className="sidebar-user-avatar-wrapper">
             <img 
-              src="/sena-logo-perfil.png.webp.webp" 
+              src="/sena-logo-perfil.webp" 
               alt="Perfil" 
               className="sidebar-user-avatar"
             />

@@ -157,7 +157,7 @@ const AuthScreen = ({ onLogin }) => {
         {/* Logo y título */}
         <div className="auth-logo-section">
           <img 
-            src="/sena-logo.png.png" 
+            src="/sena-logo-alt.png" 
             alt="Logo SENA" 
             className="auth-logo-img"
           />

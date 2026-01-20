@@ -42,7 +42,7 @@ const LoadingScreen = () => {
         {/* Logo animado */}
         <div className="loading-logo-container">
           <img 
-            src="/sena-logo.png.png" 
+            src="/sena-logo-alt.png" 
             alt="Logo SENA" 
             className="loading-logo epic-loader"
           />
