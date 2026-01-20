@@ -1,0 +1,296 @@
+/* ============================================
+   TYPOGRAPHYSHOWCASE.CSS - Showcase de tipografía
+   
+   Este archivo contiene los estilos para mostrar
+   diferentes opciones tipográficas del sistema
+   ============================================ */
+
+.typography-showcase {
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  min-height: 100vh;
+}
+
+.showcase-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.showcase-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #39A900, #2d8000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.showcase-header p {
+  font-size: 1.25rem;
+  color: #718096;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.typography-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.font-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.font-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.font-preview {
+  padding: 2rem;
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.font-info {
+  padding: 1.5rem;
+}
+
+.font-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.font-description {
+  color: #718096;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.font-samples {
+  margin-bottom: 1.5rem;
+}
+
+.sample-text {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: #f7fafc;
+  border-radius: 0.5rem;
+  border-left: 4px solid #39A900;
+}
+
+.sample-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #4a5568;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.sample-content {
+  color: #2d3748;
+}
+
+/* Estilos específicos para cada fuente */
+.inter-font {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.roboto-font {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.poppins-font {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.opensans-font {
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.lato-font {
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.nunito-font {
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Características de la fuente */
+.font-characteristics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.characteristic {
+  text-align: center;
+  padding: 0.75rem;
+  background: #f7fafc;
+  border-radius: 0.5rem;
+}
+
+.characteristic-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #39A900;
+  display: block;
+}
+
+.characteristic-label {
+  font-size: 0.75rem;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Casos de uso */
+.use-cases {
+  margin-bottom: 1.5rem;
+}
+
+.use-cases h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.use-case-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.use-case-list li {
+  padding: 0.25rem 0;
+  color: #4a5568;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+}
+
+.use-case-list li::before {
+  content: '→';
+  color: #39A900;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* Botón de selección */
+.select-font-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #39A900, #2d8000);
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.875rem;
+}
+
+.select-font-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(57, 169, 0, 0.3);
+}
+
+.select-font-btn.selected {
+  background: #2d3748;
+}
+
+/* Navegación */
+.showcase-nav {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.nav-button {
+  background: #39A900;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+}
+
+.nav-button:hover {
+  background: #2d8000;
+  transform: translateY(-1px);
+}
+
+.nav-button.secondary {
+  background: #6b7280;
+}
+
+.nav-button.secondary:hover {
+  background: #4b5563;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .typography-showcase {
+    padding: 1rem;
+  }
+  
+  .showcase-header h1 {
+    font-size: 2rem;
+  }
+  
+  .typography-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .font-characteristics {
+    grid-template-columns: 1fr;
+  }
+  
+  .nav-button {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.font-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.font-card:nth-child(2) { animation-delay: 0.1s; }
+.font-card:nth-child(3) { animation-delay: 0.2s; }
+.font-card:nth-child(4) { animation-delay: 0.3s; }
+.font-card:nth-child(5) { animation-delay: 0.4s; }
+.font-card:nth-child(6) { animation-delay: 0.5s; }

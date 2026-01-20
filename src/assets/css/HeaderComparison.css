@@ -1,0 +1,282 @@
+/* ============================================
+   HEADERCOMPARISON.CSS - Comparación de headers
+   
+   Este archivo contiene los estilos para mostrar
+   la comparación entre diferentes estilos de header
+   ============================================ */
+
+.header-comparison-container {
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  min-height: 100vh;
+}
+
+.comparison-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #2d3748;
+}
+
+.comparison-title h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #39A900, #2d8000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.comparison-title p {
+  font-size: 1.125rem;
+  color: #718096;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-option {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-option:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.header-preview {
+  position: relative;
+  background: #f7fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.header-info {
+  padding: 2rem;
+}
+
+.header-info h3 {
+  margin: 0 0 1rem 0;
+  color: #2d3748;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.header-info p {
+  margin: 0 0 1.5rem 0;
+  color: #718096;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-category {
+  background: #f7fafc;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid #39A900;
+}
+
+.feature-category h4 {
+  margin: 0 0 0.5rem 0;
+  color: #2d3748;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-list li {
+  padding: 0.25rem 0;
+  color: #4a5568;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+}
+
+.feature-list li::before {
+  content: '✓';
+  color: #39A900;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.pros-cons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.pros, .cons {
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.pros {
+  background: rgba(72, 187, 120, 0.1);
+  border: 1px solid rgba(72, 187, 120, 0.2);
+}
+
+.cons {
+  background: rgba(245, 101, 101, 0.1);
+  border: 1px solid rgba(245, 101, 101, 0.2);
+}
+
+.pros h4 {
+  color: #2f855a;
+  margin: 0 0 0.5rem 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.cons h4 {
+  color: #c53030;
+  margin: 0 0 0.5rem 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.pros ul, .cons ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pros li, .cons li {
+  padding: 0.25rem 0;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.pros li::before {
+  content: '+';
+  color: #2f855a;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  margin-top: 0.125rem;
+}
+
+.cons li::before {
+  content: '-';
+  color: #c53030;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  margin-top: 0.125rem;
+}
+
+/* Navegación */
+.comparison-nav {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.nav-button {
+  background: #39A900;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+}
+
+.nav-button:hover {
+  background: #2d8000;
+  transform: translateY(-1px);
+}
+
+.nav-button.secondary {
+  background: #6b7280;
+}
+
+.nav-button.secondary:hover {
+  background: #4b5563;
+}
+
+.nav-button.primary {
+  background: linear-gradient(135deg, #39A900, #2d8000);
+  box-shadow: 0 4px 15px rgba(57, 169, 0, 0.3);
+}
+
+.nav-button.primary:hover {
+  box-shadow: 0 6px 20px rgba(57, 169, 0, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-comparison-container {
+    padding: 1rem;
+  }
+  
+  .comparison-title h1 {
+    font-size: 2rem;
+  }
+  
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pros-cons {
+    grid-template-columns: 1fr;
+  }
+  
+  .header-info {
+    padding: 1.5rem;
+  }
+  
+  .nav-button {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-option {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.header-option:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.header-option:nth-child(3) {
+  animation-delay: 0.2s;
+}

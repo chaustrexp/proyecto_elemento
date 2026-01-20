@@ -1,0 +1,606 @@
+/* ============================================
+   SIDEBAR.CSS - Menú lateral limpio con Poppins
+   
+   Diseño minimalista y elegante
+   ============================================ */
+
+/* ============================================
+   SIDEBAR CONTAINER - Contenedor principal limpio
+   ============================================ */
+.sidebar-container {
+  background: #ffffff;
+  width: 17rem; /* 272px - Ancho moderado */
+  height: 100vh;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  border-right: 1px solid #f1f5f9;
+}
+
+/* Estilos para modo oscuro */
+.dark .sidebar-container {
+  background: #1e293b;
+  border-right-color: #334155;
+}
+
+/* Scrollbar personalizada para el sidebar */
+.sidebar-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-container::-webkit-scrollbar-thumb {
+  background: rgba(57, 169, 0, 0.3);
+  border-radius: 3px;
+}
+
+.sidebar-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(57, 169, 0, 0.5);
+}
+
+.dark .sidebar-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dark .sidebar-container::-webkit-scrollbar-thumb {
+  background: rgba(57, 169, 0, 0.4);
+}
+
+.dark .sidebar-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(57, 169, 0, 0.6);
+}
+
+/* ============================================
+   LOGO SECTION - Sección del logo SENA limpia
+   ============================================ */
+.sidebar-logo-section.modern {
+  padding: 1.25rem;
+  background: linear-gradient(135deg, #39A900 0%, #2d8000 100%);
+  border-bottom: none;
+}
+
+.dark .sidebar-logo-section.modern {
+  background: linear-gradient(135deg, #2d8000 0%, #1a5f00 100%);
+}
+
+.sidebar-logo-content {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.sidebar-logo-wrapper {
+  position: relative;
+}
+
+.sidebar-logo-img {
+  width: 2.75rem;
+  height: 2.75rem;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.sidebar-logo-wrapper:hover .sidebar-logo-img {
+  transform: scale(1.05);
+}
+
+.sidebar-brand-text h1,
+.sidebar-brand-text .dashboard-title {
+  color: white !important;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.sidebar-brand-text p,
+.sidebar-brand-text .dashboard-subtitle {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* ============================================
+   USER INFO SECTION - Información del usuario limpia
+   ============================================ */
+.sidebar-user-section.modern {
+  padding: 1.25rem;
+  border-bottom: 1px solid #f1f5f9;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-user-section.modern:hover {
+  background: #f8fafc;
+}
+
+.dark .sidebar-user-section.modern {
+  border-bottom-color: #334155;
+}
+
+.dark .sidebar-user-section.modern:hover {
+  background: #334155;
+}
+
+.sidebar-user-content {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.sidebar-user-avatar-wrapper {
+  position: relative;
+}
+
+.sidebar-user-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #39A900;
+}
+
+.sidebar-user-status {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background: #10b981;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.sidebar-user-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.sidebar-user-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 0.125rem;
+}
+
+.dark .sidebar-user-name {
+  color: white;
+}
+
+.sidebar-user-area {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.dark .sidebar-user-area {
+  color: #9ca3af;
+}
+
+.sidebar-user-chevron {
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+
+.sidebar-user-section.modern:hover .sidebar-user-chevron {
+  opacity: 1;
+}
+
+.chevron-icon {
+  font-size: 1rem;
+}
+
+/* ============================================
+   NAVIGATION - Menú de navegación limpio
+   ============================================ */
+.sidebar-nav {
+  padding: 1rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.sidebar-nav-header {
+  margin-bottom: 0.75rem;
+}
+
+.sidebar-nav-title {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.dark .sidebar-nav-title {
+  color: #9ca3af;
+}
+
+.sidebar-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* Ítem limpio del menú */
+.sidebar-menu-item.modern {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  text-align: left;
+  transition: all 0.2s ease;
+  color: #374151;
+  background: transparent;
+}
+
+.dark .sidebar-menu-item.modern {
+  color: #d1d5db;
+}
+
+/* Efecto hover limpio */
+.sidebar-menu-item.modern:hover {
+  background: #f8fafc;
+}
+
+.dark .sidebar-menu-item.modern:hover {
+  background: #334155;
+}
+
+/* Estados activos simples */
+.sidebar-menu-item.modern.active {
+  background: #39A900;
+  color: white;
+}
+
+.dark .sidebar-menu-item.modern.active {
+  background: #2d8000;
+  color: white;
+}
+
+/* Wrapper del icono simple */
+.sidebar-menu-icon-wrapper {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 0.375rem;
+}
+
+.sidebar-menu-item.modern.active .sidebar-menu-icon-wrapper {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.dark .sidebar-menu-icon-wrapper {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-menu-icon {
+  font-size: 1rem;
+}
+
+/* Contenido del menú */
+.sidebar-menu-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.sidebar-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.125rem;
+}
+
+.sidebar-menu-name {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.sidebar-menu-description {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+/* Badge simple */
+.sidebar-menu-badge {
+  background: #ef4444;
+  color: white;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  padding: 0.125rem 0.375rem;
+  border-radius: 9999px;
+  min-width: 1rem;
+  text-align: center;
+}
+
+.sidebar-menu-item.modern.active .sidebar-menu-badge {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Flecha simple */
+.sidebar-menu-arrow {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.sidebar-menu-item.modern:hover .sidebar-menu-arrow,
+.sidebar-menu-item.modern.active .sidebar-menu-arrow {
+  opacity: 1;
+}
+
+.arrow-icon {
+  font-size: 0.875rem;
+}
+
+/* ============================================
+   BOTTOM SECTION - Sección inferior limpia
+   ============================================ */
+.sidebar-bottom-section.modern {
+  margin-top: auto;
+  padding: 1rem;
+  background: #f8fafc;
+  border-top: 1px solid #f1f5f9;
+}
+
+.dark .sidebar-bottom-section.modern {
+  background: #334155;
+  border-top-color: #475569;
+}
+
+.sidebar-action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Botones de acción limpios */
+.sidebar-action-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+/* Botón de configuración */
+.sidebar-action-btn.config {
+  background: #6b7280;
+  color: white;
+}
+
+.sidebar-action-btn.config:hover {
+  background: #4b5563;
+}
+
+/* Botón de logout */
+.sidebar-action-btn.logout {
+  background: #ef4444;
+  color: white;
+}
+
+.sidebar-action-btn.logout:hover {
+  background: #dc2626;
+}
+
+.sidebar-action-icon {
+  font-size: 1rem;
+}
+
+.sidebar-action-text {
+  flex: 1;
+  text-align: left;
+}
+
+.sidebar-action-arrow {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.sidebar-action-btn:hover .sidebar-action-arrow {
+  opacity: 1;
+}
+
+/* ============================================
+   RESPONSIVE - Menú hamburguesa
+   Sidebar colapsable en todas las resoluciones
+   ============================================ */
+
+/* Overlay oscuro cuando el sidebar está abierto */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+  z-index: 40;
+}
+
+/* Sidebar colapsable - oculto por defecto */
+.sidebar-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 50;
+  transform: translateX(-100%); /* Oculto fuera de la pantalla a la izquierda */
+  transition: transform 0.3s ease-in-out; /* Animación suave al abrir/cerrar */
+}
+
+/* Sidebar abierto - visible */
+.sidebar-container.sidebar-open {
+  transform: translateX(0); /* Posición normal */
+}
+
+/* Mostrar overlay cuando está abierto */
+.sidebar-overlay {
+  display: block;
+}
+
+/* En escritorio, ajustar opacidad del overlay */
+@media (min-width: 769px) {
+  .sidebar-overlay {
+    background-color: rgba(0, 0, 0, 0.3); /* Menos opaco en pantallas grandes */
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar-container {
+    width: 16rem; /* Ligeramente más estrecho en tablet */
+  }
+  
+  .sidebar-logo-section.modern {
+    padding: 1rem;
+  }
+  
+  .sidebar-user-section.modern {
+    padding: 1rem;
+  }
+  
+  .sidebar-nav {
+    padding: 0.75rem;
+  }
+  
+  .sidebar-menu-item.modern {
+    padding: 0.625rem;
+  }
+  
+  .sidebar-menu-name {
+    font-size: 0.8125rem;
+  }
+  
+  .sidebar-menu-description {
+    font-size: 0.6875rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .sidebar-container {
+    width: 15rem; /* Más estrecho en móvil */
+  }
+  
+  .sidebar-logo-section.modern {
+    padding: 0.875rem;
+  }
+  
+  .sidebar-user-section.modern {
+    padding: 0.875rem;
+  }
+  
+  .sidebar-nav {
+    padding: 0.625rem;
+  }
+  
+  .sidebar-menu-item.modern {
+    padding: 0.5rem;
+    gap: 0.625rem;
+  }
+  
+  .sidebar-menu-icon-wrapper {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  
+  .sidebar-menu-icon {
+    font-size: 0.875rem;
+  }
+  
+  .sidebar-menu-name {
+    font-size: 0.75rem;
+  }
+  
+  .sidebar-menu-description {
+    font-size: 0.625rem;
+  }
+  
+  .sidebar-brand-text h1 {
+    font-size: 1rem !important;
+  }
+  
+  .sidebar-user-name {
+    font-size: 0.8125rem;
+  }
+  
+  .sidebar-user-area {
+    font-size: 0.6875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar-container {
+    width: 14rem; /* Aún más estrecho en pantallas muy pequeñas */
+  }
+  
+  .sidebar-logo-section.modern {
+    padding: 0.75rem;
+  }
+  
+  .sidebar-user-section.modern {
+    padding: 0.75rem;
+  }
+  
+  .sidebar-nav {
+    padding: 0.5rem;
+  }
+  
+  .sidebar-menu-item.modern {
+    padding: 0.375rem;
+    gap: 0.5rem;
+  }
+  
+  .sidebar-menu-icon-wrapper {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .sidebar-menu-icon {
+    font-size: 0.75rem;
+  }
+  
+  .sidebar-menu-name {
+    font-size: 0.6875rem;
+  }
+  
+  .sidebar-menu-description {
+    display: none; /* Ocultar descripción en pantallas muy pequeñas */
+  }
+  
+  .sidebar-brand-text h1 {
+    font-size: 0.875rem !important;
+  }
+  
+  .sidebar-logo-img {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+  
+  .sidebar-user-avatar {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .sidebar-user-name {
+    font-size: 0.75rem;
+  }
+  
+  .sidebar-user-area {
+    font-size: 0.625rem;
+  }
+  
+  .sidebar-action-btn {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .sidebar-bottom-section.modern {
+    padding: 0.75rem;
+  }
+}
